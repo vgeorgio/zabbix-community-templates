@@ -37,7 +37,9 @@ but should work on any Linux
 On the host with a running Postfix service you want to monitor:
   - Install the Zabbix Agent or Zabbix Agent 2 package if it is not yet installed on the host.
   - Install `logtail`.
+    - On Debian 13: ```apt install logtail```
   - Install [pflogsumm.pl](https://jimsun.linxnet.com/postfix_contrib.html) in `/usr/local/bin` and make sure the script is executable.
+    - On Debian 13: ```apt install pflogsumm```
   - Copy `files/scripts/postfix_get_spool.sh` to `/etc/zabbix/scripts` and ensure it is set executable.
     - Check `postfix_config` variable in `/etc/zabbix/scripts/postfix_get_spool.sh` and adapt if required.
   - Copy `files/sudoers.d/zabbix_postfix` to `/etc/sudoers.d`
